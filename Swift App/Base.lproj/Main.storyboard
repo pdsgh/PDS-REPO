@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xeg-ef-O5e">
+                                <rect key="frame" x="187.5" y="152" width="39" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6a4-iY-HsF">
+                                <rect key="frame" x="176" y="288" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aXW-4T-daw">
+                                <rect key="frame" x="138.5" y="376" width="137" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="F23-Bc-PV2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oTI-tW-iUN">
+                                <rect key="frame" x="138.5" y="418" width="137" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="awd-LE-LMk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VW-BZ-M56">
+                                <rect key="frame" x="177" y="476" width="60" height="30"/>
+                                <state key="normal" title="Push Me">
+                                    <color key="titleShadowColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ARa-vM-Hr1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0VW-BZ-M56" firstAttribute="top" secondItem="Xeg-ef-O5e" secondAttribute="bottom" constant="303.5" id="3pA-Kn-rko"/>
+                            <constraint firstItem="0VW-BZ-M56" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4fa-O1-dRc"/>
+                            <constraint firstItem="oTI-tW-iUN" firstAttribute="centerX" secondItem="aXW-4T-daw" secondAttribute="centerX" id="CMT-vN-JPI"/>
+                            <constraint firstItem="Xeg-ef-O5e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="108" id="QXo-JT-XfY"/>
+                            <constraint firstItem="aXW-4T-daw" firstAttribute="centerX" secondItem="6a4-iY-HsF" secondAttribute="centerX" id="T1M-NS-5tm"/>
+                            <constraint firstItem="6a4-iY-HsF" firstAttribute="top" secondItem="0VW-BZ-M56" secondAttribute="bottom" constant="-218" id="aV2-bp-Ky3"/>
+                            <constraint firstItem="6a4-iY-HsF" firstAttribute="centerX" secondItem="0VW-BZ-M56" secondAttribute="centerX" id="avV-Qa-bJU"/>
+                            <constraint firstItem="oTI-tW-iUN" firstAttribute="top" secondItem="aXW-4T-daw" secondAttribute="bottom" constant="8" id="bMW-J9-dVQ"/>
+                            <constraint firstItem="0VW-BZ-M56" firstAttribute="centerX" secondItem="Xeg-ef-O5e" secondAttribute="centerX" id="oaw-Pd-fs3"/>
+                            <constraint firstItem="Xeg-ef-O5e" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tCd-Nm-1ZN"/>
+                            <constraint firstItem="aXW-4T-daw" firstAttribute="firstBaseline" secondItem="6a4-iY-HsF" secondAttribute="baseline" constant="93" id="xra-d6-FjT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="counterLbl" destination="6a4-iY-HsF" id="YO7-0A-v1c"/>
+                        <outlet property="greetingLbl" destination="Xeg-ef-O5e" id="GTu-wi-3mn"/>
+                        <outlet property="txt1" destination="aXW-4T-daw" id="mgT-o8-hu1"/>
+                        <outlet property="txt2" destination="oTI-tW-iUN" id="rCs-hG-YwY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+</document>
