@@ -52,12 +52,21 @@
                                     <action selector="btnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ARa-vM-Hr1"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sCe-Fo-i7D">
+                                <rect key="frame" x="134.5" y="337" width="145" height="32"/>
+                                <segments>
+                                    <segment title="Add"/>
+                                    <segment title="Subtract"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="0VW-BZ-M56" firstAttribute="top" secondItem="Xeg-ef-O5e" secondAttribute="bottom" constant="303.5" id="3pA-Kn-rko"/>
                             <constraint firstItem="0VW-BZ-M56" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4fa-O1-dRc"/>
+                            <constraint firstItem="aXW-4T-daw" firstAttribute="top" secondItem="sCe-Fo-i7D" secondAttribute="bottom" constant="8" id="4kk-v2-w6d"/>
                             <constraint firstItem="oTI-tW-iUN" firstAttribute="centerX" secondItem="aXW-4T-daw" secondAttribute="centerX" id="CMT-vN-JPI"/>
+                            <constraint firstItem="sCe-Fo-i7D" firstAttribute="centerX" secondItem="aXW-4T-daw" secondAttribute="centerX" id="HOM-gx-tCF"/>
                             <constraint firstItem="Xeg-ef-O5e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="108" id="QXo-JT-XfY"/>
                             <constraint firstItem="aXW-4T-daw" firstAttribute="centerX" secondItem="6a4-iY-HsF" secondAttribute="centerX" id="T1M-NS-5tm"/>
                             <constraint firstItem="6a4-iY-HsF" firstAttribute="top" secondItem="0VW-BZ-M56" secondAttribute="bottom" constant="-218" id="aV2-bp-Ky3"/>
@@ -70,6 +79,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="calculator" destination="sCe-Fo-i7D" id="liz-eb-jyg"/>
                         <outlet property="counterLbl" destination="6a4-iY-HsF" id="YO7-0A-v1c"/>
                         <outlet property="greetingLbl" destination="Xeg-ef-O5e" id="GTu-wi-3mn"/>
                         <outlet property="txt1" destination="aXW-4T-daw" id="mgT-o8-hu1"/>

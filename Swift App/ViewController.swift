@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var txt2: UITextField!
     @IBOutlet weak var counterLbl: UILabel!
     @IBOutlet weak var greetingLbl: UILabel!
+    
+    @IBOutlet weak var calculator: UISegmentedControl!
     var lblState = false
     var counter = 0
     
@@ -34,23 +36,35 @@ class ViewController: UIViewController {
     
     func setLbl(){
         
+        var add = true
         
         if txt1.text != "" || txt2.text != "" {
-        
+            
             var var1 = 0
             var var2 = 0
             
             if let v1 = Int(txt1.text!) {
                 var1 = v1
+            } else {
+                var1 = 0
+                txt1.text = "0"
             }
             
-           if let v2 = Int(txt2.text!) {
-               var2 = v2
-           }
+            if let v2 = Int(txt2.text!) {
+                var2 = v2
+            } else {
+                var2 = 0
+                txt2.text = "0"
+            }
             
-           
+            if calculator.selectedSegmentIndex == 0 {
+                add = true
+            } else {
+                add = false
+            }
             
-            self.greetingLbl.text = "SUM = \(var1 + var2)"
+            self.greetingLbl.text = getResult(addition: add, var1: var1, var2: var2)
+            
         } else {
             
             if lblState == true {
@@ -80,7 +94,16 @@ class ViewController: UIViewController {
         }
         
     }
-
+    
+    func getResult(addition:Bool, var1:Int, var2:Int) -> String {
+        if addition {
+            return "SUM = \(var1 + var2)"
+        } else {
+            return "DIFFERENCE = \(var1 - var2)"
+        }
+    
+    }
+    
 
 }
 
